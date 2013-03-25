@@ -3,8 +3,8 @@ package beans;
 import java.util.ArrayList;
 
 public class BeanCrammer {
-	
-	//ATRIBUTOS QUE REPRESENTÃO AS ICÓGNITAS X,Y E Z:
+
+	// ATRIBUTOS QUE REPRESENTÃO AS ICÓGNITAS X,Y E Z:
 	private ArrayList<Float> incognitasX = new ArrayList<Float>();
 	private ArrayList<Float> incognitasY = new ArrayList<Float>();
 	private ArrayList<Float> incognitasZ = new ArrayList<Float>();
@@ -14,24 +14,24 @@ public class BeanCrammer {
 	private float deltaX;
 	private float deltaY;
 	private float deltaZ;
-	
-	//CONSTRUTOR VAZIO:
-	public BeanCrammer()
-		{
-			
+
+	// CONSTRUTOR VAZIO:
+	public BeanCrammer() {
+
 	}
-	
-	//CONSTRUTOR QUE SÓ RECEBE AS ICÓGNITAS E INDEPENDENTES PARA 3x3:
+
+	// CONSTRUTOR QUE SÓ RECEBE AS ICÓGNITAS E INDEPENDENTES PARA 3x3:
 	public BeanCrammer(ArrayList<Float> incognitasX,
-			ArrayList<Float> incognitasY, ArrayList<Float> incognitasZ, ArrayList<Float> independentes) {
+			ArrayList<Float> incognitasY, ArrayList<Float> incognitasZ,
+			ArrayList<Float> independentes) {
 		super();
 		this.setIncognitasX(incognitasX);
 		this.setIncognitasY(incognitasY);
 		this.setIncognitasZ(incognitasZ);
 		this.setIndependentes(independentes);
 	}
-	
-	//CONSTRUTOR QUE SÓ RECEBE AS ICÓGNITAS E INDEPENDENTES PARA 2x2:
+
+	// CONSTRUTOR QUE SÓ RECEBE AS ICÓGNITAS E INDEPENDENTES PARA 2x2:
 	public BeanCrammer(ArrayList<Float> incognitasX,
 			ArrayList<Float> incognitasY, ArrayList<Float> independentes) {
 		super();
@@ -39,8 +39,8 @@ public class BeanCrammer {
 		this.setIncognitasY(incognitasY);
 		this.setIndependentes(independentes);
 	}
-	
-	//CONSTRUTOR COMPLETO:
+
+	// CONSTRUTOR COMPLETO:
 	public BeanCrammer(ArrayList<Float> incognitasX,
 			ArrayList<Float> incognitasY, ArrayList<Float> incognitasZ,
 			ArrayList<Float> independentes, ArrayList<Float> determinantes,
@@ -128,5 +128,5 @@ public class BeanCrammer {
 	public void setDeltaZ(float deltaZ) {
 		this.deltaZ = deltaZ;
 	}
-		
+
 }

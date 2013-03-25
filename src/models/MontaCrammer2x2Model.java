@@ -80,23 +80,24 @@ public class MontaCrammer2x2Model implements MontaCrammerInterfaceModel {
 
 		this.Crammer2x2.setDeterminantes(determinantes);
 	}
-	
-	public void calculaDeltas()
-	{
-		this.Crammer2x2.setDeltaX(this.Crammer2x2.getDeterminantes().get(0) / this.Crammer2x2.getDeterminanteSistema());
-		this.Crammer2x2.setDeltaY(this.Crammer2x2.getDeterminantes().get(1) / this.Crammer2x2.getDeterminanteSistema());
+
+	public void calculaDeltas() {
+		this.Crammer2x2.setDeltaX(this.Crammer2x2.getDeterminantes().get(0)
+				/ this.Crammer2x2.getDeterminanteSistema());
+		this.Crammer2x2.setDeltaY(this.Crammer2x2.getDeterminantes().get(1)
+				/ this.Crammer2x2.getDeterminanteSistema());
 	}
-	
-	public void calculaCrammer(){
+
+	public void calculaCrammer() {
 		calculaDeterminanteSistema();
 		calculaDeterminantes();
 		calculaDeltas();
 	}
-	
+
 	public BeanCrammer getCrammer2x2() {
 		return this.Crammer2x2;
 	}
-	
+
 	public void setCrammer3x3(BeanCrammer Crammer2x2) {
 		this.Crammer2x2 = Crammer2x2;
 	}
