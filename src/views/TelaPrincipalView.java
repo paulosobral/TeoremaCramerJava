@@ -209,7 +209,7 @@ public class TelaPrincipalView extends JFrame {
 		this.txtrInfoCrammer.setEditable(false);
 		this.txtrInfoCrammer.setLineWrap(true);
 		this.txtrInfoCrammer
-				.setText("* Informe somente os num\u00E9ros, caso seja um n\u00FAmero negativo informe o sinal de menos na frente do n\u00FAmero. \r\nExemplo: 5-7\r\n\r\n* S\u00E3o aceitos n\u00FAmeros decimais, caso queira informar uma frac\u00E3o\r\ninforme em decimal.\r\nExemplo 1/5 = 0,2\r\n\r\n* Caso algum campo esteja em branco, se auto assumir\u00E1 como 1.");
+				.setText("* Informe somente os num\u00E9ros, caso seja um n\u00FAmero negativo informe o sinal de menos na frente do n\u00FAmero. \r\nExemplo: 5-7\r\n\r\n* S\u00E3o aceitos n\u00FAmeros decimais, caso queira informar uma fra\u00E7\u00E3o\r\ninforme em decimal.\r\nExemplo 1/5 = 0,2\r\n\r\n* Caso algum campo esteja em branco, se auto assumir\u00E1 como 1.");
 		this.txtrInfoCrammer.setBounds(24, 40, 546, 160);
 		this.panelCrammer2x2.add(txtrInfoCrammer);
 
@@ -340,7 +340,7 @@ public class TelaPrincipalView extends JFrame {
 		this.txtrInfoCrammer.setEditable(false);
 		this.txtrInfoCrammer.setLineWrap(true);
 		this.txtrInfoCrammer
-				.setText("* Informe somente os num\u00E9ros, caso seja um n\u00FAmero negativo informe o sinal de menos na frente do n\u00FAmero. \r\nExemplo: 5-7\r\n\r\n* S\u00E3o aceitos n\u00FAmeros decimais, caso queira informar uma frac\u00E3o\r\ninforme em decimal.\r\nExemplo 1/5 = 0,2\r\n\r\n* Caso algum campo esteja em branco, se auto assumir\u00E1 como 1.");
+				.setText("* Informe somente os num\u00E9ros, caso seja um n\u00FAmero negativo informe o sinal de menos na frente do n\u00FAmero. \r\nExemplo: 5-7\r\n\r\n* S\u00E3o aceitos n\u00FAmeros decimais, caso queira informar uma fra\u00E7\u00E3o\r\ninforme em decimal.\r\nExemplo 1/5 = 0,2\r\n\r\n* Caso algum campo esteja em branco, se auto assumir\u00E1 como 1.");
 		this.txtrInfoCrammer.setBounds(24, 40, 546, 160);
 		this.panelCrammer3x3.add(this.txtrInfoCrammer);
 
