@@ -28,6 +28,9 @@ public class TelaPrincipalView extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
+	// VAR QUE REPRESENTA QUE ESTÁ NA TELA INICIAL:
+	public boolean telaInicio = true;
+
 	// ATRIBUTOS DO MENU PRINCIPAL:
 	public JMenuBar menuBar = new JMenuBar();
 	public JMenu mnNovoCrammer = new JMenu("Novo Crammer");
@@ -114,6 +117,16 @@ public class TelaPrincipalView extends JFrame {
 		// MONTA O PAINEL INÍCIO:
 		montaPainelInicio();
 
+		// MONTATEXTO INFO CRAMMER:
+		this.txtrInfoCrammer.setFont(new Font("Monospaced", Font.PLAIN, 11));
+		this.txtrInfoCrammer.setBackground(UIManager
+				.getColor("Button.background"));
+		this.txtrInfoCrammer.setEditable(false);
+		this.txtrInfoCrammer.setLineWrap(true);
+		this.txtrInfoCrammer
+				.setText("* Informe somente os num\u00E9ros, caso seja um n\u00FAmero negativo informe o sinal de menos na frente do n\u00FAmero. \r\nExemplo: -7 (sem espa\u00E7os)\r\n\r\n* S\u00E3o aceitos n\u00FAmeros decimais, caso queira informar uma fra\u00E7\u00E3o\r\ninforme em decimal.\r\nExemplo 1/5 = 0.2 (somente ponto)\r\n\r\n* Caso algum campo esteja em branco, se auto assumir\u00E1 como 1.");
+		this.txtrInfoCrammer.setBounds(24, 40, 546, 160);
+
 		setVisible(true);
 	}
 
@@ -150,8 +163,11 @@ public class TelaPrincipalView extends JFrame {
 	// MONTA TELA CRAMMER 2X2:
 	public void montaPainelCrammer2x2() {
 
+		// INFORMA QUE SAIU DA TELA INICIAL:
+		this.telaInicio = false;
+
 		this.panelCrammer2x2.setLayout(null);
-		lblTipoTabela.setBounds(24, 0, 155, 45);
+		this.lblTipoTabela.setBounds(24, 0, 155, 45);
 
 		this.lblTipoTabela.setText("Tabela (Crammer 2x2):");
 		this.panelCrammer2x2.add(this.lblTipoTabela);
@@ -204,14 +220,7 @@ public class TelaPrincipalView extends JFrame {
 		lblIgual2.setBounds(338, 293, 40, 14);
 		this.panelCrammer2x2.add(lblIgual);
 		this.panelCrammer2x2.add(lblIgual2);
-		this.txtrInfoCrammer.setFont(new Font("Monospaced", Font.PLAIN, 11));
-		this.txtrInfoCrammer.setBackground(UIManager.getColor("Button.background"));
-		this.txtrInfoCrammer.setEditable(false);
-		this.txtrInfoCrammer.setLineWrap(true);
-		this.txtrInfoCrammer
-				.setText("* Informe somente os num\u00E9ros, caso seja um n\u00FAmero negativo informe o sinal de menos na frente do n\u00FAmero. \r\nExemplo: 5-7\r\n\r\n* S\u00E3o aceitos n\u00FAmeros decimais, caso queira informar uma fra\u00E7\u00E3o\r\ninforme em decimal.\r\nExemplo 1/5 = 0,2\r\n\r\n* Caso algum campo esteja em branco, se auto assumir\u00E1 como 1.");
-		this.txtrInfoCrammer.setBounds(24, 40, 546, 160);
-		this.panelCrammer2x2.add(txtrInfoCrammer);
+		this.panelCrammer2x2.add(this.txtrInfoCrammer);
 
 		this.lblResultadoCrammer.setText("Resultado Crammer 2x2:");
 		this.lblResultadoCrammer.setBounds(24, 400, 155, 45);
@@ -257,8 +266,11 @@ public class TelaPrincipalView extends JFrame {
 	// MONTA TELA CRAMMER 3X3:
 	public void montaPainelCrammer3x3() {
 
+		// INFORMA QUE SAIU DA TELA INICIAL:
+		this.telaInicio = false;
+
 		this.panelCrammer3x3.setLayout(null);
-		lblTipoTabela.setBounds(24, 0, 155, 45);
+		this.lblTipoTabela.setBounds(24, 0, 155, 45);
 
 		this.lblTipoTabela.setText("Tabela (Crammer 3x3):");
 		this.panelCrammer3x3.add(this.lblTipoTabela);
@@ -334,14 +346,6 @@ public class TelaPrincipalView extends JFrame {
 		this.lblResultadoCrammer.setText("Resultado Crammer 3x3:");
 		this.lblResultadoCrammer.setBounds(24, 400, 155, 45);
 		this.panelCrammer3x3.add(this.lblResultadoCrammer);
-
-		this.txtrInfoCrammer.setFont(new Font("Monospaced", Font.PLAIN, 11));
-		this.txtrInfoCrammer.setBackground(UIManager.getColor("Button.background"));
-		this.txtrInfoCrammer.setEditable(false);
-		this.txtrInfoCrammer.setLineWrap(true);
-		this.txtrInfoCrammer
-				.setText("* Informe somente os num\u00E9ros, caso seja um n\u00FAmero negativo informe o sinal de menos na frente do n\u00FAmero. \r\nExemplo: 5-7\r\n\r\n* S\u00E3o aceitos n\u00FAmeros decimais, caso queira informar uma fra\u00E7\u00E3o\r\ninforme em decimal.\r\nExemplo 1/5 = 0,2\r\n\r\n* Caso algum campo esteja em branco, se auto assumir\u00E1 como 1.");
-		this.txtrInfoCrammer.setBounds(24, 40, 546, 160);
 		this.panelCrammer3x3.add(this.txtrInfoCrammer);
 
 		// RESULTADOS:

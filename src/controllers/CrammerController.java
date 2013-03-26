@@ -131,6 +131,7 @@ public class CrammerController extends Thread {
 
 	// CHAMA A TELA DE CRAMMER2X2;
 	public void limparCrammer() {
+
 		this.telaprincipal.tfX1.setText(null);
 		this.telaprincipal.tfX2.setText(null);
 		this.telaprincipal.tfX3.setText(null);
@@ -152,6 +153,7 @@ public class CrammerController extends Thread {
 		this.telaprincipal.tfDeltaX.setEnabled(false);
 		this.telaprincipal.tfDeltaY.setEnabled(false);
 		this.telaprincipal.tfDeltaZ.setEnabled(false);
+
 	}
 
 	// INICIO CLASSES INTERNAS:
@@ -160,7 +162,23 @@ public class CrammerController extends Thread {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			CrammerController.this.crammer2x2();
+
+			if (CrammerController.this.telaprincipal.telaInicio == false) {
+				// PERGUNTA SE REALMENTE QUER BRIR O CRAMMER 2x2 E PERDER
+				// CRAMMER ATUAL:
+				int confirmaLimparCrammer = JOptionPane
+						.showConfirmDialog(
+								null,
+								"Deseja realmente iniciar um novo Crammer 2x2?\nVocê perdera este Crammer atual.",
+								"Novo Crammer 2x2", JOptionPane.YES_NO_OPTION);
+
+				if (confirmaLimparCrammer == JOptionPane.YES_OPTION) {
+					CrammerController.this.crammer2x2();
+				}
+			} else {
+				CrammerController.this.crammer2x2();
+			}
+
 		}
 	}
 
@@ -169,7 +187,23 @@ public class CrammerController extends Thread {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			CrammerController.this.crammer3x3();
+
+			if (CrammerController.this.telaprincipal.telaInicio == false) {
+				// PERGUNTA SE REALMENTE QUER BRIR O CRAMMER 3x3 E PERDER
+				// CRAMMER ATUAL:
+				int confirmaLimparCrammer = JOptionPane
+						.showConfirmDialog(
+								null,
+								"Deseja realmente iniciar um novo Crammer 3x3?\nVocê perdera este Crammer atual.",
+								"Novo Crammer 3x3", JOptionPane.YES_NO_OPTION);
+
+				if (confirmaLimparCrammer == JOptionPane.YES_OPTION) {
+					CrammerController.this.crammer3x3();
+				}
+			} else {
+				CrammerController.this.crammer3x3();
+			}
+
 		}
 	}
 
@@ -218,7 +252,14 @@ public class CrammerController extends Thread {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 
-			CrammerController.this.limparCrammer();
+			// PERGUNTA SE REALMENTE QUER APAGAR O CRAMMER:
+			int confirmaLimparCrammer = JOptionPane.showConfirmDialog(null,
+					"Deseja realmente limpar este Crammer?", "Limpar Crammer",
+					JOptionPane.YES_NO_OPTION);
+
+			if (confirmaLimparCrammer == JOptionPane.YES_OPTION) {
+				CrammerController.this.limparCrammer();
+			}
 
 		}
 	}
