@@ -285,7 +285,7 @@ public class CrammerController extends Thread {
 				CrammerController.this.calculaCrammer2x2(v);
 			} else {
 				JOptionPane.showMessageDialog(null,
-						"Por favor, informe somente números!");
+						"Por favor, informe somente números (sem letras ou espaços).");
 				CrammerController.this.telaprincipal.tfDeltaX.setText("ERRO!");
 				CrammerController.this.telaprincipal.tfDeltaY.setText("ERRO!");
 				CrammerController.this.telaprincipal.tfDeterminanteSistema
@@ -322,7 +322,7 @@ public class CrammerController extends Thread {
 				CrammerController.this.calculaCrammer3x3(v);
 			} else {
 				JOptionPane.showMessageDialog(null,
-						"Por favor, informe somente números!");
+						"Por favor, informe somente números (sem letras ou espaços).");
 				CrammerController.this.telaprincipal.tfDeltaX.setText("ERRO!");
 				CrammerController.this.telaprincipal.tfDeltaY.setText("ERRO!");
 				CrammerController.this.telaprincipal.tfDeltaZ.setText("ERRO!");
