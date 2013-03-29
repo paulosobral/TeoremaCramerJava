@@ -292,9 +292,10 @@ public class TelaPrincipalView extends JFrame {
 		panelTabelaCrammerXYZ.add(this.tfX2);
 		panelTabelaCrammerXYZ.add(this.tfY2);
 		panelTabelaCrammerXYZ.add(this.tfZ2);
-		panelTabelaCrammerXYZ.add(this.tfZ3);
-		panelTabelaCrammerXYZ.add(this.tfY3);
 		panelTabelaCrammerXYZ.add(this.tfX3);
+		
+		panelTabelaCrammerXYZ.add(this.tfY3);
+		panelTabelaCrammerXYZ.add(this.tfZ3);
 
 		// TABELA INDEPENDENTES:
 		JPanel panelTabelaIndependentesXYZ = new JPanel();
@@ -315,11 +316,11 @@ public class TelaPrincipalView extends JFrame {
 		this.tfX1.setHorizontalAlignment(JTextField.CENTER);
 		this.tfX2.setHorizontalAlignment(JTextField.CENTER);
 		this.tfX3.setHorizontalAlignment(JTextField.CENTER);
-
+		
 		this.tfY1.setHorizontalAlignment(JTextField.CENTER);
 		this.tfY2.setHorizontalAlignment(JTextField.CENTER);
 		this.tfY3.setHorizontalAlignment(JTextField.CENTER);
-
+		
 		this.tfZ1.setHorizontalAlignment(JTextField.CENTER);
 		this.tfZ2.setHorizontalAlignment(JTextField.CENTER);
 		this.tfZ3.setHorizontalAlignment(JTextField.CENTER);
