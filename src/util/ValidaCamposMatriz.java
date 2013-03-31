@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class validaCamposCrammer {
+public class ValidaCamposMatriz {
 
 	private ArrayList<Float> valoresOk;
 	private boolean erro;
 
-	public validaCamposCrammer(ArrayList<String> valores) {
+	public ValidaCamposMatriz(ArrayList<String> valores) {
 
 		this.setErro(false);
 		this.valoresOk = new ArrayList<Float>();
@@ -48,8 +48,8 @@ public class validaCamposCrammer {
 
 			} else // ESTÁ NULO:
 			{
-				this.valoresOk.add((float) 1);
-				// System.out.println("Está nulo! vira 1.");
+				this.valoresOk.add((float) 0);
+				// System.out.println("Está nulo! vira 0.");
 			}
 
 		}// FIM FOREACH

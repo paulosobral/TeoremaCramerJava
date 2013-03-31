@@ -2,26 +2,40 @@ package beans;
 
 import java.util.ArrayList;
 
-public class BeanCrammer {
+public class BeanMatriz {
 
-	// ATRIBUTOS QUE REPRESENTÃO AS ICÓGNITAS X,Y E Z:
+	// ATRIBUTOS QUE REPRESENTÃO AS ICÓGNITAS X,Y,Z e W:
 	private ArrayList<Float> incognitasX = new ArrayList<Float>();
 	private ArrayList<Float> incognitasY = new ArrayList<Float>();
 	private ArrayList<Float> incognitasZ = new ArrayList<Float>();
+	private ArrayList<Float> incognitasW = new ArrayList<Float>();
 	private ArrayList<Float> independentes = new ArrayList<Float>();
 	private ArrayList<Float> determinantes = new ArrayList<Float>();
 	private float determinanteSistema;
 	private float deltaX;
 	private float deltaY;
 	private float deltaZ;
+	private float deltaW;
 
 	// CONSTRUTOR VAZIO:
-	public BeanCrammer() {
+	public BeanMatriz() {
 
 	}
 
+	// CONSTRUTOR QUE SÓ RECEBE AS ICÓGNITAS E INDEPENDENTES PARA 4x4:
+	public BeanMatriz(ArrayList<Float> incognitasX,
+			ArrayList<Float> incognitasY, ArrayList<Float> incognitasZ,
+			ArrayList<Float> incognitasW, ArrayList<Float> independentes) {
+		super();
+		this.setIncognitasX(incognitasX);
+		this.setIncognitasY(incognitasY);
+		this.setIncognitasZ(incognitasZ);
+		this.setIncognitasW(incognitasW);
+		this.setIndependentes(independentes);
+	}
+
 	// CONSTRUTOR QUE SÓ RECEBE AS ICÓGNITAS E INDEPENDENTES PARA 3x3:
-	public BeanCrammer(ArrayList<Float> incognitasX,
+	public BeanMatriz(ArrayList<Float> incognitasX,
 			ArrayList<Float> incognitasY, ArrayList<Float> incognitasZ,
 			ArrayList<Float> independentes) {
 		super();
@@ -32,7 +46,7 @@ public class BeanCrammer {
 	}
 
 	// CONSTRUTOR QUE SÓ RECEBE AS ICÓGNITAS E INDEPENDENTES PARA 2x2:
-	public BeanCrammer(ArrayList<Float> incognitasX,
+	public BeanMatriz(ArrayList<Float> incognitasX,
 			ArrayList<Float> incognitasY, ArrayList<Float> independentes) {
 		super();
 		this.setIncognitasX(incognitasX);
@@ -41,20 +55,23 @@ public class BeanCrammer {
 	}
 
 	// CONSTRUTOR COMPLETO:
-	public BeanCrammer(ArrayList<Float> incognitasX,
+	public BeanMatriz(ArrayList<Float> incognitasX,
 			ArrayList<Float> incognitasY, ArrayList<Float> incognitasZ,
-			ArrayList<Float> independentes, ArrayList<Float> determinantes,
-			float determinanteSistema, float deltaX, float deltaY, float deltaZ) {
+			ArrayList<Float> incognitasW, ArrayList<Float> independentes,
+			ArrayList<Float> determinantes, float determinanteSistema,
+			float deltaX, float deltaY, float deltaZ, float deltaW) {
 		super();
 		this.incognitasX = incognitasX;
 		this.incognitasY = incognitasY;
 		this.incognitasZ = incognitasZ;
+		this.incognitasW = incognitasW;
 		this.independentes = independentes;
 		this.determinantes = determinantes;
 		this.determinanteSistema = determinanteSistema;
 		this.deltaX = deltaX;
 		this.deltaY = deltaY;
 		this.deltaZ = deltaZ;
+		this.deltaW = deltaW;
 	}
 
 	public ArrayList<Float> getIncognitasX() {
@@ -127,6 +144,22 @@ public class BeanCrammer {
 
 	public void setDeltaZ(float deltaZ) {
 		this.deltaZ = deltaZ;
+	}
+
+	public float getDeltaW() {
+		return deltaW;
+	}
+
+	public void setDeltaW(float deltaW) {
+		this.deltaW = deltaW;
+	}
+
+	public ArrayList<Float> getIncognitasW() {
+		return incognitasW;
+	}
+
+	public void setIncognitasW(ArrayList<Float> incognitasW) {
+		this.incognitasW = incognitasW;
 	}
 
 }
