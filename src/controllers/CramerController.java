@@ -46,8 +46,11 @@ public class CramerController extends Thread {
 
 		// ADD OUVINTES:
 		this.telaprincipal.addOuvinteMenu2x2(ouvinte2x2);
+		this.telaprincipal.addOuvinteBtnInicioCramer2x2(ouvinte2x2);
 		this.telaprincipal.addOuvinteMenu3x3(ouvinte3x3);
+		this.telaprincipal.addOuvinteBtnInicioCramer3x3(ouvinte3x3);
 		this.telaprincipal.addOuvinteMenu4x4(ouvinte4x4);
+		this.telaprincipal.addOuvinteBtnInicioLaplace4x4(ouvinte4x4);
 		this.telaprincipal
 				.addOuvinteMenuDesenvolvedores(ouvintedesenvolvedores);
 		this.telaprincipal.addOuvinteMenuCramer(ouvintecramer);

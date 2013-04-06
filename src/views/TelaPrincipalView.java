@@ -23,6 +23,7 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import java.awt.Font;
+import java.awt.Color;
 
 public class TelaPrincipalView extends JFrame {
 
@@ -89,6 +90,9 @@ public class TelaPrincipalView extends JFrame {
 	private JLabel lblW = new JLabel("W", JLabel.CENTER);
 
 	// BOTÕES:
+	private JButton btnInicioCramer2x2 = new JButton("Novo Cramer 2x2");
+	private JButton btnInicioCramer3x3 = new JButton("Novo Cramer 3x3");
+	private JButton btnInicioLaplace4x4 = new JButton("Novo Laplace 4x4");
 	private JButton btnCalcularCramer2x2 = new JButton();
 	private JButton btnCalcularCramer3x3 = new JButton();
 	private JButton btnCalcularLaplace4x4 = new JButton();
@@ -167,17 +171,30 @@ public class TelaPrincipalView extends JFrame {
 	}
 
 	public void montaPainelInicio() {
+		panelInicio.setBackground(new Color(240, 240, 240));
 		this.panelInicio.setPreferredSize(new Dimension(500, 500));
 		this.panelInicio.setMinimumSize(new Dimension(500, 500));
+		panelInicio.setLayout(new BorderLayout(0, 0));
 		this.panelInicio.add(new JLabel(new ImageIcon(this.getClass()
-				.getResource("/assets/img/telaInicio.jpg"))));
+				.getResource("/assets/img/telaInicio.jpg"))), BorderLayout.NORTH);
 
 		this.panelPrincipal.add(this.panelInicio);
+		
+		JPanel panelBtnInicio = new JPanel();
+		
+		panelInicio.add(panelBtnInicio, BorderLayout.CENTER);
+		panelBtnInicio.setLayout(new GridLayout(1, 3, 0, 0));
+		
+		panelBtnInicio.add(btnInicioCramer2x2);
+		
+		panelBtnInicio.add(btnInicioCramer3x3);
+		
+		panelBtnInicio.add(btnInicioLaplace4x4);
 	}
 
 	// MONTA TELA CRAMER 2X2:
 	public void montaPainelCramer2x2() {
-
+		
 		// INFORMA QUE SAIU DA TELA INICIAL:
 		this.telaInicio = false;
 
@@ -595,6 +612,21 @@ public class TelaPrincipalView extends JFrame {
 		this.mntmx_5.addActionListener(ouvinte);
 	}
 
+	// ADD OUVINTE AO BTN INICIO CRAMER 2x2:
+	public void addOuvinteBtnInicioCramer2x2(ActionListener ouvinte) {
+		this.btnInicioCramer2x2.addActionListener(ouvinte);
+	}
+	
+	// ADD OUVINTE AO BTN INICIO CRAMER 3x3:
+	public void addOuvinteBtnInicioCramer3x3(ActionListener ouvinte) {
+		this.btnInicioCramer3x3.addActionListener(ouvinte);
+	}
+	
+	// ADD OUVINTE AO BTN INICIO CRAMER 2x2:
+	public void addOuvinteBtnInicioLaplace4x4(ActionListener ouvinte) {
+		this.btnInicioLaplace4x4.addActionListener(ouvinte);
+	}
+		
 	// ADD OUVINTE AO BTN LIMPAR CRAMER:
 	public void addOuvinteBtnLimparCramer(ActionListener ouvinte) {
 		this.btnLimparCramer.addActionListener(ouvinte);

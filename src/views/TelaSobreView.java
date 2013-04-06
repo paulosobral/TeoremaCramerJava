@@ -75,11 +75,11 @@ public class TelaSobreView extends JFrame {
 
 		JTextArea txtrGrupo = new JTextArea();
 		txtrGrupo.setBackground(UIManager.getColor("Button.background"));
-		txtrGrupo.setFont(new Font("Monospaced", Font.BOLD, 11));
+		txtrGrupo.setFont(new Font("Monospaced", Font.BOLD, 10));
 		txtrGrupo.setEditable(false);
 		txtrGrupo
-				.setText("Andr\u00E9 Henrique\r\nRA: 4200060619\r\n\r\nFernando Lucas\r\nRA: 4200060622\r\n\r\nJorge de Oliveira\r\nRA: 4200060636\r\n\r\nLeonardo Dombrauskas\r\nRA: 4200060624\r\n\r\nMichael Sousa\r\nRA: 129992 0396\r\n\r\nPaulo Fernando\r\nRA: 3708609304");
-		txtrGrupo.setBounds(135, 215, 155, 285);
+				.setText("Andr\u00E9 Henrique\r\nRA: 4200060619\r\n\r\nAndrey Resende\r\nRA: 4616913286\r\n\r\nFernando Lucas\r\nRA: 4200060622\r\n\r\nJorge de Oliveira\r\nRA: 4200060636\r\n\r\nLeonardo Dombrauskas\r\nRA: 4200060624\r\n\r\nMichael Sousa\r\nRA: 1299920396\r\n\r\nPaulo Fernando\r\nRA: 3708609304");
+		txtrGrupo.setBounds(155, 215, 155, 285);
 		getContentPane().add(txtrGrupo);
 
 		// LICENSE:
